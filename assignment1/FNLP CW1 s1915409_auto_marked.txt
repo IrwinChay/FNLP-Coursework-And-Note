@@ -1,0 +1,247 @@
+FNLP ASSIGNMENT 1
+Student UUN: s1915409
+
+***Question 1 (7 marks) ***
+** Testing model by checking its length and selected probabilities...
+Model length: 5579336
+|* Passed automarker test: 2 marks (out of 2)
+P(h|t): 0.3116466822608252
+|* Passed automarker test: 1 marks (out of 1)
+P(u|q): 0.9853501906482038
+|* Passed automarker test: 1 marks (out of 1)
+P(z|q): 1.4536908944718608e-06
+|* Passed automarker test: 1 marks (out of 1)
+P(j|<s>): 0.005158178014182952
+|* Passed automarker test: 1 marks (out of 1)
+P(</s>|e): 0.348077988641086
+|* Passed automarker test: 1 marks (out of 1)
+|*
+|* Total for Question 1: 7 marks
+**---
+
+***Question 2 (7 marks) ***
+Twitter corpus, best 10 w. entropies: [(2.4921691054394848, ['and', 'here', 'is', 'proof', 'the']), (2.5390025889056123, ['and', 'bailed', 'he', 'here', 'is', 'man', 'on', 'that', 'the']), (2.5584079236733106, ['is', 'the', 'this', 'weather', 'worst']), (2.5686534278173125, ['s', 's', 's', 's', 's', 's', 's', 's', 's', 's']), '...']
+|* Passed automarker value test: 4 marks (out of 4)
+Twitter corpus, worst 10 w. entropies: [(17.523736748003564, ['作品によっては怪人でありながらヒーロー', 'あるいはその逆', 'というシチュエーションも多々ありますが', 'そうした事がやれるのもやはり怪人とヒーローと言うカテゴリが完成しているからだと思うんですよね', 'あれだけのバリエーションがありながららしさを失わないデザインにはまさに感服です']), (17.524868750262904, ['ロンブーの淳さんはスピリチュアルスポット', 'セドナーで瞑想を実践してた', 'これらは偶然ではなく必然的に起こっている', '自然は全て絶好のタイミングで教えてくれている', 'そして今が今年最大の大改革時期だ']), (17.5264931699585, ['実物経済と金融との乖離を際限なく広げる', 'レバレッジが金融で儲けるコツだと', 'まるで正義のように叫ぶ連中が多いけど', 'これほど不健全な金融常識はないと思う', '連中は不健全と知りながら', '他の奴がやるから出し抜かれる前に出し抜くのが道理と言わんばかりに群がる']), (17.527615646393077, ['一応ワンセット揃えてみたんだけど', 'イマイチ効果を感じないのよね', 'それよりはオーラソーマとか', '肉体に直接働きかけるタイプのアプローチの方が効き目を感じ取りやすい', '波動系ならバッチよりはホメオパシーの方がわかりやすい']), '...']
+|* Passed automarker value test: 3 marks (out of 3)
+|*
+|* Total for Question 2: 7 marks
+**---
+
+***Question 3 (8 marks) ***
+  The beginning of the lists have correctly spelled, short, and common
+  English words (e.g. and, is, the)  with lower entropy (2.5). The end
+  of the lists have long, rare in English, and non-latin characters
+  with  high entropy (17.5). The end of the lists are being assigned a
+  lower certainty since they are being  considered as unseen data by
+  the bigram model based on Brown corpus which contains English words
+  only.
+
+**---414 chars, 70 words
+|* Marker comment: 
+|* good points. the model is not kind of acting like a language detector. 
+|* 
+|* Hand-examined free text answer, max length 500 chars = ~80 words and awarded: 6 marks (out of 8)
+|*
+|* Total for Question 3: 6 marks
+**---
+
+***Question 4 (8 marks) ***
+  Problem: data contains many misspelled words since Twitter users do
+  not always follow formal English spellings;   Technique: filter out;
+  or apply spelling correction by edit distance on the data;
+
+  Problem: data contains many word forms, abbreviation, or slang (e.g.
+  FNLP, IAML) Technique: filter non-formal words out, or apply
+  clustering by a word embedding (or simply lemmatization) to combine
+  different slangs with similar  meanings if they provide important
+  information to the task;
+
+**---486 chars, 71 words
+|* Marker comment: 
+|* things like URL, RT, lol, should also be removed
+|* 
+|* Hand-examined free text answer, max length 500 chars = ~80 words and awarded: 5 marks (out of 8)
+|*
+|* Total for Question 4: 5 marks
+**---
+
+***Question 5 (15 marks) ***
+
+** Part 5.1: Stats (5 marks) ***
+Mean: 3.8435755769050926
+|* Passed automarker test: 2.5 marks (out of 2.5)
+Standard deviation: 0.47772976561662
+|* Passed automarker test: 2.5 marks (out of 2.5)
+
+** Part 5.2: 'Ascii' tweets (5 marks) ***
+10 best: [(2.4921691054394848, ['and', 'here', 'is', 'proof', 'the']), (2.5390025889056123, ['and', 'bailed', 'he', 'here', 'is', 'man', 'on', 'that', 'the']), (2.5584079236733106, ['is', 'the', 'this', 'weather', 'worst']), (2.5686534278173125, ['s', 's', 's', 's', 's', 's', 's', 's', 's', 's']), '...']
+|* Passed automarker value test: 2.5 marks (out of 2.5)
+10 worst: [(5.166314124571327, ['hoje', 'nossa', 'amiga', 'espero', 'q', 'sorte', 'tenha', 'vc']), (5.166378486661663, ['aok', 'berlin', 'brandenburg', 'bürofläche', 'commercial', 'engel', 'immobilien', 'meldung', 'mietet', 'potsdam', 'potsdam', 'qm', 'v', 'völkers']), (5.166607294898407, ['mi', 'rt', 'ixxi', 'squeciduu', 'yinha']), (5.166636591109558, ['asdhiasdhiuadshiuads', 'rt', 'tentaando', 'to', 'x']), '...']
+|* Passed automarker value test: 2.5 marks (out of 2.5)
+
+** Part 5.3: Probably not English tweets (5 marks) ***
+10 best: [(4.321320405509358, ['afganistán', 'asociación', 'de', 'de', 'mujeres', 'rawa', 'revolucionarias']), (4.321322108677053, ['carrey', 'face', 'feat', 'mariah', 'minaj', 'my', 'nicki', 'out', 'rt', 'up', 'video', 'xxlmag', 'com']), (4.321338322311484, ['abisss', 'aja', 'demo', 'gini', 'hari', 'hikmah', 'mantabsss', 'membawa', 'sepi', 'sudirman', 'thamrin', 'tiap', 'trnyta']), (4.321374586541906, ['a', 'a', 'agora', 'com', 'consegui', 'd', 'de', 'dormir', 'dormir', 'durmo', 'e', 'eu', 'inteira', 'mas', 'nao', 'nao', 'nao', 'nao', 'noite', 'noite', 'nove', 'q', 'se', 'sono', 'to', 'vou']), '...']
+|* Passed automarker value test: 2.5 marks (out of 2.5)
+10 worst: [(5.166314124571327, ['hoje', 'nossa', 'amiga', 'espero', 'q', 'sorte', 'tenha', 'vc']), (5.166378486661663, ['aok', 'berlin', 'brandenburg', 'bürofläche', 'commercial', 'engel', 'immobilien', 'meldung', 'mietet', 'potsdam', 'potsdam', 'qm', 'v', 'völkers']), (5.166607294898407, ['mi', 'rt', 'ixxi', 'squeciduu', 'yinha']), (5.166636591109558, ['asdhiasdhiuadshiuads', 'rt', 'tentaando', 'to', 'x']), '...']
+|* Passed automarker value test: 2.5 marks (out of 2.5)
+|*
+|* Total for Question 5: 15.0 marks
+**---
+
+***Question 6 (15 marks) ***
+  Sparse data problem: since zero probability exists for possible
+  sequence, the corpus can never represent all English language.
+  Independence assumption: P(word) only depends on a fixed number of
+  history
+
+  Corpus problem: with similar words, some use of language is more
+  predictable.  Assumption: corpus used contains all words and all
+  form of English, development set drawn from same source as training
+  set
+
+  Model problem: only cross entropy could be measured instead of
+  actual entropy, and different models shows different performance.
+  Assumption: the model used could compress the data with highest
+  efficiency and its cross entropy = entropy
+
+  Since per word cross entropy could be approximated by the average
+  negative log probability a model assigns to each word, a Ngram model
+  (with smoothing such as back off) is trained by MLE to estimate
+  probability of next word. The model is then tested on another
+  development set. As N increases, the cross entropy approaches the
+  entropy of English.
+
+**---992 chars, 155 words
+|* Marker comment: 
+|* good points mentioned. in addition, variants of English is not specified here. 
+|* 
+|* Hand-examined free text answer, max length 1000 chars = ~160 words and awarded: 10 marks (out of 15)
+|*
+|* Total for Question 6: 10 marks
+**---
+
+***Question 7 (15 marks) ***
+
+** Part 7.1: Vocabulary (1 marks) ***
+vocabulary size: 13521
+|* Passed automarker test: 1 marks (out of 1)
+
+** Part 7.2: Training method (8 marks) ***
+Prior: {'N': 0.5223306571799433, 'V': 0.47766934282005674}
+|* Passed automarker test: 1 marks (out of 1)
+P(('v', 'rose')|V): 0.006913064743369809
+|* Passed automarker test: 1 marks (out of 1)
+P(('p', 'of')|V): 0.0012190937826217086
+|* Passed automarker test: 1 marks (out of 1)
+P(('p', 'of')|N): 0.12333945519178972
+|* Passed automarker test: 1 marks (out of 1)
+P(('n2', '609')|N): 2.2315401420598457e-06
+|* Passed automarker test: 1 marks (out of 1)
+P(('n2', '609')|V): 2.6766530157362866e-05
+|* Passed automarker test: 1 marks (out of 1)
+P(('n1', 'million')|V): 0.004917741586184577
+|* Passed automarker test: 1 marks (out of 1)
+P(('n1', 'million')|N): 0.004933935254094318
+|* Passed automarker test: 1 marks (out of 1)
+
+** Part 7.3: Prob classify (5 marks) ***
+P(d|[('v', 'took')]): {'N': 0.41139627956588926, 'V': 0.5886037204341108}
+|* Passed automarker test: 1 marks (out of 1)
+P(d|[('v', 'took'), ('n1', 'advantage')]): {'N': 0.8436673290620547, 'V': 0.1563326709379453}
+|* Passed automarker test: 1 marks (out of 1)
+P(d|[('p', 'to')]): {'N': 0.18757809621627583, 'V': 0.8124219037837241}
+|* Passed automarker test: 1 marks (out of 1)
+P(d|[('n1', 'dsfjghdkfjgh'), ('p', 'to')]): {'N': 0.18757809621627583, 'V': 0.8124219037837241}
+|* Passed automarker test: 1 marks (out of 1)
+P(d|[('v', 'values'), ('n1', 'plan'), ('p', 'at'), ('n2', 'billion')]): {'N': 0.0038562513284388163, 'V': 0.9961437486715612}
+|* Passed automarker test: 1 marks (out of 1)
+
+** Part 7.4: Classify (1 marks) ***
+classification: ['V', 'N']
+|* Passed automarker test: 1 marks (out of 1)
+
+** Part 7.5: Accuracy (0 marks) ***
+Overall check for accuracy: 0.7949987620698192
+|* Passed automarker test: 0 marks (out of 0)
+|*
+|* Total for Question 7: 15 marks
+**---
+
+***Question 8 (10 marks) ***
+  The accuracy of only using feature P is higher: it provides the
+  greatest information. So the attachment of prepositional phrases is
+  mostly determined by the choice of preposition word. All 4 words
+  could not be considered redundant stopwords, single used or
+  combined. The label (N1, N2) also lowers uncertainty.
+
+  The accuracy of Q7 is 79.5%. So dependences between features lower
+  some uncertainty. Naive Bayes also assumes all features equally
+  important but P provides more information.
+
+**---488 chars, 75 words
+|* Marker comment: 
+|* good mention of independence assumption. 
+|* 
+|* Hand-examined free text answer, max length 500 chars = ~80 words and awarded: 7 marks (out of 10)
+|*
+|* Total for Question 8: 7 marks
+**---
+
+***Question 9 (10 marks) ***
+  Since the vocab contains different forms of the same word (e.g.
+  companies) but they are encoded independently, lemmatization is used
+  to cluster them. When applying only to N1, lemmatization contributes
+  the greatest improvements (0.3%).
+
+  Since feature P provides the most information, I concatenate it with
+  other single features to further emphasize the use of P. (3% acc)
+
+  E.G: The feature ('p', 'of') and features containing P (e.g. v+p)
+  have the highest weights since the model depends on the choice of
+  preposition to determine the attachment.
+
+  Since sequential features might lower the model’s uncertainty, I
+  encoded the features as uni, bi & trigram and concatenated them to
+  resemble interpolation. (0.8% acc)
+
+  E.G: So trigram features have some of the highest weights (2.49,
+  2.40)
+
+  E.G: the feature '1988' is an outlier since it does not provide
+  information to disambiguate PP. By inspection, all 3 occurrences
+  belong to the ‘V’ class. It might be a bias in corpus captured by
+  the model
+
+**---997 chars, 159 words
+
+Best 10 features by abs. weight:
+    -5.206 ('p', 'of')==1 and label is 'V'
+    -3.528 ('p', 'without')==1 and label is 'N'
+    -3.023 ('n1', 'it')==1 and label is 'N'
+    -2.930 ('p', 'until')==1 and label is 'N'
+    -2.734 ('v', 'advanced')==1 and label is 'N'
+    -2.698 ('p', 'via')==1 and label is 'N'
+    -2.674 ('v', 'reflecting')==1 and label is 'V'
+     2.490 (('v', 'assume'), ('p', 'of'), ('n1', 'million'))==1 and label is 'V'
+     2.404 (('n1', '3'), ('n2', 'point'))==1 and label is 'N'
+     2.404 (('p', 'to'), ('n1', '3'), ('n2', 'point'))==1 and label is 'N'
+|* Marker comment: 
+|* very good. you can also try to standardise number and years. 
+|* 
+|* Hand-examined free text answer, max length 1000 chars = ~160 words and awarded: 7 marks (out of 10)
+|*
+|* Total for Question 9: 7 marks
+**---
+
+***Question 10 (5 marks) ***
+Dev Accuracy : 0.852191136419906
+|* Passed automarker test: 5 marks (out of 5)
+|*
+|* Total for Question 10: 5 marks
+**---
+
+|* Automarked total: 49.0 marks
+|* Hand-marked total: 35 marks (out of 51.0)
+|*
+|* TOTAL FOR ASSIGNMENT: 84 marks
