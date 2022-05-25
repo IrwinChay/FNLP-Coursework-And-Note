@@ -1,0 +1,167 @@
+FNLP ASSIGNMENT 2
+Student: s1915409
+
+***Question 1 (7 marks) ***
+States: ['DET', 'NOUN', 'ADJ', 'VERB', '...']
+|* Passed automarker test: 1 marks (out of 1)
+Number of VERB types: 2649
+|* Passed automarker test: 1 marks (out of 1)
+Emission cost of 'attack' as a VERB: 12.062
+|* Passed automarker test: 5 marks (out of 5)
+
+**---
+|*
+|* Total for Question 1: 7 marks
+**---
+
+***Question 2 (7 marks) ***
+Number of transitions from VERB: 13
+|* Passed automarker test: 3 marks (out of 3)
+Transition cost from VERB to DET: 2.463
+|* Passed automarker test: 4 marks (out of 4)
+|*
+|* Total for Question 2: 7 marks
+**---
+
+***Question 3 (20 marks) ***
+
+** Part 3.1: Description of data structures (5 marks) ***
+|* Marker comment for part 3.1: There are some comments regarding he procedure for the data structure setup.
+|* 
+|* 
+|* Hand-examined code for errors and awarded: 3.5 marks (out of 5)
+
+** Part 3.2: Initialisation (15 marks) ***
+Backpointers for second time step: ['PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON', 'PRON']
+|* Passed automarker test: 5 marks (out of 5)
+Viterbi values for first time step: [26.782208935674642, 27.175612695180405, 26.83747232781355, 25.69387747486122, 26.069930312266184, 25.33122669020975, 26.602772790690192, 26.7617409338053, 6.7157647918435055, 26.154747513228394, 28.346102791874564, 27.06281489027102]
+|* Passed automarker test: 10 marks (out of 10)
+|*
+|* Total for Question 3: 18.5 marks
+**---
+
+***Question 4a (30 marks) ***
+
+** Part 4a.1: Automatic tests (25 marks) ***
+Accuracy: 0.89411
+|* Passed automarker test: 7 marks (out of 7)
+Viterbi values for time step 1: [34.01526253042612, 26.139704758753695, 34.54383920395947, 32.31894404945449, 34.25048137679512, 36.22833529220789, 27.617716596488677, 37.174460980126284, 34.96569792142533, 33.2167214529358, 30.719087535156927, 43.877716268423896]
+|* Passed automarker test: 3 marks (out of 3)
+Backpointers for time step 1: ['NOUN', 'ADJ', 'NOUN', 'NOUN', 'ADJ', 'VERB', 'ADJ', 'ADJ', 'NOUN', 'ADJ', 'NOUN', 'ADJ']
+|* Passed automarker test: 2 marks (out of 2)
+Viterbi values for time step 2: [52.96761801645391, 52.61690686578734, 53.24942252459456, 54.72356597513747, 52.53968502182914, 34.012187579823376, 51.358458806319945, 52.70225028680407, 55.14157828038837, 53.01419324341059, 54.12151433519213, 54.72321304758704]
+|* Passed automarker test: 3 marks (out of 3)
+Backpointers for time step 2: ['DET', 'DET', 'DET', 'DET', 'DET', 'DET', 'DET', 'DET', 'DET', 'DET', 'DET', 'DET']
+|* Passed automarker test: 2 marks (out of 2)
+Viterbi values for time step 3: [64.0217433334945, 58.59624615156186, 64.37034195590547, 61.74080618135381, 67.52308363114038, 64.95730590909109, 44.11359964060699, 60.60376213192809, 62.6503191185711, 64.14971027238595, 61.85439770355395, 60.37766863378029]
+|* Passed automarker test: 3 marks (out of 3)
+Sample tags: ['DET', 'NOUN', 'ADP', 'DET', 'NOUN', 'VERB', 'ADV']
+|* Passed automarker test: 5 marks (out of 5)
+
+** Part 4a.2: Handling of </s> (5 marks) ***
+|* Marker comment for part 4a.2: The </s> tag is handled correctly.
+|* 
+|* 
+|* Hand-examined code for errors and awarded: 5 marks (out of 5)
+|*
+|* Total for Question 4a: 30 marks
+**---
+
+***Question 4b (5 marks) ***
+
+** Part 4b.1: Example taggings (1 marks) ***
+|* Passed automarker test: 0.5 marks (out of 0.5)
+|* Passed automarker test: 0.5 marks (out of 0.5)
+        'Bad' tags        'Good' tags
+       ('``', '.')        ('``', '.')
+     ('My', 'DET')      ('My', 'DET')
+ ('taste', 'NOUN')  ('taste', 'NOUN')
+    ('is', 'VERB')     ('is', 'VERB')
+  ('gaudy', 'ADV')*  ('gaudy', 'ADJ')
+        ('.', '.')         ('.', '.')
+
+
+** Part 4b.2: Free text answer (4 marks) ***
+  Since HMM assumes transition probability is only dependent of the
+  previous word, “gaudy” is independent of “taste” but they are
+  actually related. So it chooses ‘ADV’ since transition probability
+  from ‘VERB’ to ‘ADV’ is higher and the emission probability
+  dominates.
+
+**---267 chars, 40 words
+|* Marker comment for part 4b.2: You make a good argument with respect to the modely limitations and linguistics. You could have improved the answer by including the numeric data to support their claims.
+|* 
+|* 
+|* Hand-examined code for errors and awarded: 3 marks (out of 4)
+|*
+|* Total for Question 4b: 4 marks
+**---
+
+***Question 5a (5 marks) ***
+Accuracy of t0: 0.55844
+|* Passed automarker test: 1 marks (out of 1)
+Accuracy of tk: 0.60907
+|* Passed automarker test: 4 marks (out of 4)
+|*
+|* Total for Question 5a: 5 marks
+**---
+
+***Question 5b (6 marks) ***
+  In labeled data, ‘he’ does not exist so the model assigns its
+  emission probability to zero. After adopting unlabeled data, the
+  model observes higher expected count from verb to ‘he’ so assigns a
+  higher transition probability from ‘VERB’ to ‘PRON’ than to ‘NUM’.
+
+  ’Them’ is misspelled in Tk. Since ‘ADP’ is more commonly followed by
+  ‘NOUN’ instead of ‘PRON’, hard EM also selects the most possible
+  observation, it reaches a local maximum and overfits the data.
+
+**---464 chars, 76 words
+|* Marker comment: (1) you are making a very strong claim regarding the emission probability -- given which tag? Does that mean the emission probability is 0 for all possible states? If so, why exactly was NUM chosen? The addition of unlabeled data helps, but you are missing an important observation, and that is that other pronouns exist in the trainig set, and "he" appears in the same contexts as these pronouns within the unlabeled data -- this leads to the model leaning towards "he" being a tagged as a pronoun. (2) You make a very brief frequency argument, and do not make a comment on the effect of the (imperfectly) pseudo-labelled data and smoothing leading to data pollution.
+|* 
+|* 
+|* Hand-examined free text answer and awarded: 3.5 marks (out of 6)
+|*
+|* Total for Question 5b: 3.5 marks
+**---
+
+***Question 6 (10 marks) ***
+  First, the pre-trained tagger tags the sentences with words missing
+  in lexicon, then the generated tags could be used to predict the
+  emission probability of missing words. Afterwards, normalize this
+  emission probability with that of the words with the same tags. When
+  using hand-crafted CFG, those emission probability are used instead
+  of the original zero emission probability when encountering unseen
+  word. So this approach would be better.
+
+**---443 chars, 67 words
+|* Marker comment: When you refer to the tagger you mention emission probabilities. This leads me to believe that you are assuming a HMM model, which is not something the question is givin you. It is importnat to address probabilities in your PCFG, but the emission model in this case is not the way, as you do not necessarily have access to it given the question statment.
+|* 
+|* 
+|* Hand-examined free text answer and awarded: 5 marks (out of 10)
+|*
+|* Total for Question 6: 5 marks
+**---
+
+***Question 7 (10 marks) ***
+  Since universal tagset is not language specific, the model could
+  transfer to other languages given corresponding training data. Since
+  the Brown Corpus tagset has more tags, there are more categories to
+  predict. Given the same training corpus, more categories are
+  assigned to a word and each data (word and tag pair) would be less
+  frequently observed. So the data become more sparse and the accuracy
+  would drop.
+
+**---412 chars, 67 words
+|* Marker comment: I find your first statement confusing -- maybe your program could be easily transferred, but for the model itself to be transferred would be odd -- the tagger is modelling a feature of the language -- its syntax -- which will differ, potentially dramatically between languages. You do point out the data sparsity issue and link it to perfmrance drop. A more complete explanation would be: larger tagset -> more model parameters -> more pronounced data sparsity issues -> given limited training data, likely worse performance than on a smaller tagset. The answer would also benefit from including the actual sizes of the tagsets.
+|* 
+|* 
+|* Hand-examined answer and awarded: 6 marks (out of 10)
+|*
+|* Total for Question 7: 6 marks
+**---
+
+|* Automarked total: 60.0 marks
+|* Hand-marked total: 26 marks (out of 40.0)
+|*
+|* TOTAL FOR ASSIGNMENT: 86 marks
